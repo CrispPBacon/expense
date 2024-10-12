@@ -1,0 +1,69 @@
+.bills {
+  background-color: rgba(0, 0, 0, 0.651);
+  width: 20rem;
+  padding: 1rem;
+  border: 2px solid var(--dark-color);
+}
+
+.bills h1 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+.bills-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.bills-form input {
+  padding: 0.5rem;
+  background-color: var(--dark-color);
+  outline: none;
+  border: none;
+  color: white;
+}
+
+.bills-form button {
+  margin-top: 0.5rem;
+}
+
+.bills-form input:nth-child(2) {
+  margin: 0.1rem 0;
+}
+
+.bills-form input:nth-child(3) {
+  color: gray;
+}
+
+.bills-form input:focus {
+  background-color: #303030;
+}
+
+.result {
+  max-height: 20rem;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+
+table {
+  background-color: var(--dark-color);
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 1rem;
+  /* border: 1px solid gray; */
+}
+
+tr:hover {
+  background-color: gray;
+}
+
+td:nth-child(1),
+td:nth-child(2),
+th:nth-child(1),
+th:nth-child(2) {
+  padding: 0 5rem;
+}

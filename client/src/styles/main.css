@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap");
+/* https://www.blockmate.io/blog/how-to-build-the-personal-finance-management-app-in-5-minutes-using-react-and-blockmate-web3-api */
+
+@import url("./elements/elements.css");
+@import url("./pages/login.css");
+
+:root {
+  --btn-color: rgb(0, 102, 255);
+  --btn-color-text: #fff;
+  --btn-color-hover: rgb(14, 82, 185);
+  --btn-color-active: rgb(10, 70, 160);
+
+  --nav-bar-color: #191919;
+  --dark-color: #151515;
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("./background.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+}
+
+body::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+/* *** Scroll-bar *** */
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 2px solid #202020;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #454545;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #757575;
+}
