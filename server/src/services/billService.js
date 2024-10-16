@@ -25,4 +25,10 @@ async function getBills(req) {
   return data;
 }
 
-module.exports = { addBill, getBills };
+async function deleteBill(_id) {
+  if (!_id) throw new CustomError("Enter a valid id!");
+  await billsCollection.findOneAndDelete({ _id });
+  return { msg: "Success!" };
+}
+
+module.exports = { addBill, getBills, deleteBill };

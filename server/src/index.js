@@ -16,7 +16,7 @@ app.use("/api/bills", verifyAuth, billRoutes);
 
 app.get("/access", verifyAuth, (req, res) => {
   console.log(req.user);
-  res.json({ message: "Welcome user" });
+  res.json({ message: `Welcome ${req.user.payload.username}` });
 });
 
 /* MongoDB and ExpressJs Connection. */

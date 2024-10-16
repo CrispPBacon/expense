@@ -25,4 +25,15 @@ async function getBills(req, res) {
   }
 }
 
-module.exports = { newBill, getBills };
+async function delBill(req, res, next) {
+  try {
+    const _id = req.params.id;
+    const data = await bill.deleteBill(_id);
+    next();
+  } catch (error) {
+    if (error instanceof CustomError)
+      res.status(500).json({ error: error.message });
+  }
+}
+
+module.exports = { newBill, getBills, delBill };

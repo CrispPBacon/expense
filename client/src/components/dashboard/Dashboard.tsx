@@ -52,7 +52,7 @@ function Dashboard() {
         }
       )
       .then((res) => {
-        setData((prev) => (prev ? [...prev, res.data] : [res.data]));
+        setData((prev) => (prev ? [res.data, ...prev] : [res.data]));
       })
       .catch((error) => {
         console.log(error);
@@ -61,6 +61,24 @@ function Dashboard() {
           navigate("/");
         }
       });
+  };
+
+  const handleDelete = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    bill_id: string
+  ) => {
+    const token = cookies.get("TOKEN");
+    e.preventDefault();
+    console.log(bill_id);
+    axios
+      .delete(`http://localhost:3000/api/bills/${bill_id}`, {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      })
+      .then((res) => setData(res.data.length > 0 ? res.data : null))
+      .catch((error) => console.log(error.message));
   };
   useEffect(() => {
     const token = cookies.get("TOKEN");
@@ -72,7 +90,7 @@ function Dashboard() {
         },
       })
       .then((res) => {
-        if (res.data.length !== 0) setData(res.data);
+        if (res.data.length !== 0) setData(res.data.reverse());
       })
       .catch((error) => {
         console.log(error.message);
@@ -118,6 +136,7 @@ function Dashboard() {
                 <th>Name</th>
                 <th>Amount</th>
                 <th>Due</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -125,9 +144,18 @@ function Dashboard() {
                 <tr key={bill._id}>
                   <td>{bill.name}</td>
                   <td>{bill.amount}</td>
-                  <td>{`${month[toDate(bill.due).getMonth()]} ${toDate(
+                  <td>{`${month[toDate(bill.due).getMonth() - 1]} ${toDate(
                     bill.due
                   ).getDay()} ${toDate(bill.due).getFullYear()}`}</td>
+                  <td>
+                    <button
+                      onClick={(e) => {
+                        handleDelete(e, bill._id);
+                      }}
+                    >
+                      Delete
+                    </button>
+                  </td>
                 </tr>
               ))}
             </tbody>
