@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extract Avatars</title>
+    <style>
+        #extractedAvatar {
+            width: 100px; /* Display size */
+            height: 100px; /* Display size */
+            border: 2px solid black;
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="canvas" style="display: none;"></canvas>
+<img id="extractedAvatar" alt="Extracted Avatar" />
+
+<script>
+    // Load the sprite sheet
+    const image = new Image();
+    image.src = './2145552.jpg'; // Replace with your image path
+
+    image.onload = function() {
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+
+        // Set the size of the canvas to match the sprite sheet
+        canvas.width = image.width;
+        canvas.height = image.height;
+        console.log(image.height)
+
+        // Draw the sprite sheet onto the canvas
+        ctx.drawImage(image, 0, 0);
+
+        // Extract a specific avatar (e.g., 1st avatar in a grid)
+        const avatarWidth = 380; // Width of each avatar
+        const avatarHeight = 380; // Height of each avatar
+        const xOffset = 133+450+453; // X coordinate of the avatar in the sprite sheet
+        const yOffset = 345; // Y coordinate of the avatar in the sprite sheet
+
+        // Create a new canvas for the extracted avatar
+        const extractedCanvas = document.createElement('canvas');
+        extractedCanvas.width = avatarWidth;
+        extractedCanvas.height = avatarHeight;
+        const extractedCtx = extractedCanvas.getContext('2d');
+
+        // Draw the specific avatar onto the new canvas
+        extractedCtx.drawImage(canvas, xOffset, yOffset, avatarWidth, avatarHeight, 0, 0, avatarWidth, avatarHeight);
+
+        // Convert the extracted avatar to a data URL
+        const dataURL = extractedCanvas.toDataURL('image/png');
+        document.getElementById('extractedAvatar').src = dataURL;
+    };
+</script>
+
+</body>
+</html>

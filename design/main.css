@@ -5,10 +5,17 @@
 /* https://www.blockmate.io/blog/how-to-build-the-personal-finance-management-app-in-5-minutes-using-react-and-blockmate-web3-api */
 /* https://app.uizard.io/templates/PjXBoyAKjWFnZZK7AnA5/fullscreen */
 
-@import url("./elements.css");
-@import url("./pages/login.css");
-@import url("./pages/expenses.css");
-@import url("./pages/navbar.css");
+@import url("./components/login.css");
+@import url("./components/expenses.css");
+@import url("./components/navbar.css");
+@import url("./components/dashboard.css");
+@import url("/components/expenseForm.css");
+
+@import url("./default.css");
+@import url("./layout.css");
+
+/* Elements Style */
+@import url("./elements/button.css");
 
 :root {
   --btn-color: rgb(0, 102, 255);
@@ -28,13 +35,13 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  letter-spacing: 0.5px;
   font-weight: 300;
+  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url("./background.jpg") no-repeat;
+  background: url("./images/background.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -52,47 +59,10 @@ body::before {
   z-index: -1;
 }
 
-/* *** Scroll-bar *** */
-/* width */
-::-webkit-scrollbar,
-::-webkit-scrollbar-corner {
-  width: 4px;
+/* .item-grid td {
+  background-color: red;
 }
 
-::-webkit-scrollbar:horizontal {
-  height: 4px;
-  /* background-color: transparent; */
-  display: none;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-  border: 2px solid #202020;
-  border-radius: 20px;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #454545;
-  border-radius: 20px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #757575;
-}
-
-@keyframes fadeIn {
-  from {
-    transform: translateY(-999);
-  }
-  to {
-    transform: translateY(0);
-  }
-}
-
-#animatedElement {
-  transform: translateY(-999px);
-  animation: fadeIn 0.5s forwards; /* Trigger animation on load */
-}
+.item-grid table {
+  border-spacing: 5px;
+} */

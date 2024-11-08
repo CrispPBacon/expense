@@ -1,4 +1,4 @@
-button {
+.btn {
   cursor: pointer;
   color: var(--btn-color-text);
   background-color: var(--btn-color);
@@ -10,11 +10,11 @@ button {
   width: min(25rem, 100%);
 }
 
-button:hover {
+.btn:hover {
   background-color: var(--btn-color-hover);
   transition: background 0.15s ease-in-out;
 }
 
-button:active {
+.btn:active {
   background-color: var(--btn-color-active);
 }

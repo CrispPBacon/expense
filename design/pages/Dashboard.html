@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="profile">
+                <img src="../images/9e43206d-2845-40e3-ae3b-ed15d35e3a96.jfif" alt="profile">
+                <h1>Allan Soriano</h1>
+            </div>
+            <ul>
+                <li>
+                    <span><ion-icon name="home"></ion-icon></span>
+                    <h1>Dashboard</h1>
+                </li>
+                <li>
+                    <span><ion-icon name="card"></ion-icon></span>
+                    <h1>Expenses</h1>
+                </li>
+                <li>
+                    <span><ion-icon name="checkmark-done-circle"></ion-icon></span>
+                    <h1>Approval</h1>
+                </li>
+                <li>
+                    <span><ion-icon name="options"></ion-icon></span>
+                    <h1>Settings</h1>
+                </li>
+                <li>
+                    <span style="color: #ff5555;"><ion-icon name="log-out"></ion-icon></span>
+                    <h1 style="color: #ff5555;">Logout</h1>
+                </li>
+            </ul>
+            <div class="logo">
+                <h1>ExpenseWise</h1>
+            </div>
+        </nav>
+        <main>
+            <!-- <header>
+                <h1>Dashboard</h1>
+            </header> -->
+            <div class="dashboard-grid">
+                <div class="item-grid">
+                    <header>
+                        <h1>Overview</h1>
+                    </header>
+                    <div class="total--container">
+                        <div class="total--item">
+                            <h2> Expenses</h2>
+                            <h1>₱1,230</h1>
+                        </div>
+                        <div class="total--item">
+                            <h2>Budget</h2>
+                            <h1>₱8,432</h1>
+                        </div>
+                        <div class="total--item">
+                            <h2>Savings</h2>
+                            <h1>₱5,333</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-grid">
+                    <header>
+                        <h1>Recent Expenses</h1>
+                    </header>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Member</th>
+                                <th>Team</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Advertisement</td>
+                                <td>John Smith</td>
+                                <td><span class="bubble color--aquamarine">Marketing</span></td>
+                                <td>₱1,232</td>
+                            </tr>
+                            <tr>
+                                <td>Production</td>
+                                <td>Eleanor Wave</td>
+                                <td><span class="bubble color--blue">Software</span></td>
+                                <td>₱1,232</td>
+                            </tr>
+                            <tr>
+                                <td>Office Supplies</td>
+                                <td>Bella Jones</td>
+                                <td><span class="bubble color--purple">HR</span></td>
+                                <td>₱1,232</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="item-grid">
+                    <header>
+                        <h1>Quick Access</h1>
+                    </header>
+                    <div class="actions-container">
+                        <button class="btn">
+                            <ion-icon name="card" class="bubble color--purple"></ion-icon> 
+                            <p>New Expense</p>
+                        </button>
+                        <button class="btn">
+                            <ion-icon name="receipt" class="bubble color--blue"></ion-icon>
+                            <p>Add Receipt</p>
+                        </button>
+                        <button class="btn">
+                            <ion-icon name="receipt" class="bubble color--aquamarine"></ion-icon>
+                            <p>Create Report</p>
+                        </button>
+                    </div>
+                </div>
+                <div class="item-grid">
+                    <header>
+                        <h1>Monthly Report</h1>
+                    </header>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <canvas id="myBarChart" width="400" height="200"></canvas>
+                        </div>
+                        <div class="bar-chart">
+    
+                            <canvas id="myBarChart2" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="./chart.js"></script>
+</body>
+</html>

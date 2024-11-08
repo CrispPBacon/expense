@@ -1,4 +1,5 @@
 const authService = require("../services/authService");
+const { CustomError } = require("../utils/handleError");
 
 async function login(req, res) {
   try {
@@ -7,7 +8,11 @@ async function login(req, res) {
     token = await authService.loginUser(username, password);
     return res.status(200).json(token);
   } catch (error) {
-    return res.status(500).json({ error: error.message });
+    if (error instanceof CustomError) {
+      return res.status(error.statusCode).json({ error: error.message });
+    }
+    console.log(error.message);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 
@@ -18,7 +23,11 @@ async function register(req, res) {
       .status(200)
       .json({ msg: "You have succesfully registered!", user });
   } catch (error) {
-    return res.json({ error: error.message });
+    if (error instanceof CustomError) {
+      return res.status(error.statusCode).json({ error: error.message });
+    }
+    console.log(error.message);
+    return res.status(500).json({ error: "Internal server error" });
   }
 }
 

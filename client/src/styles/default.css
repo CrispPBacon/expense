@@ -1,0 +1,53 @@
+/* *** Default *** */
+img {
+  max-width: 10rem;
+}
+
+h1 {
+  font-size: small;
+}
+
+/* *** Scroll-bar *** */
+/* width */
+::-webkit-scrollbar,
+::-webkit-scrollbar-corner {
+  width: 4px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 4px;
+  /* background-color: transparent; */
+  display: none;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  border: 2px solid #202020;
+  border-radius: 20px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #454545;
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #757575;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-999);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+#animatedElement {
+  transform: translateY(-999px);
+  animation: fadeIn 0.5s forwards; /* Trigger animation on load */
+}

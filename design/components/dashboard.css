@@ -1,0 +1,164 @@
+.item-grid {
+  padding: 0.5rem;
+  border: 1.5px solid #303030;
+  border-radius: 10px;
+  border: none;
+}
+
+.item-grid:first-child,
+.item-grid:nth-child(2) {
+  overflow: hidden;
+}
+
+.item-grid th,
+.item-grid td {
+  text-align: left;
+  padding: 0.25rem;
+  font-size: 0.6rem;
+  color: rgb(171, 171, 171);
+}
+.item-grid td {
+  padding: 0.5rem;
+}
+
+.item-grid table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+.item-grid td {
+  font-weight: 400;
+  color: rgb(171, 171, 171);
+}
+
+.item-grid table .bubble {
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.4rem;
+}
+
+.item-grid table td:last-child {
+  color: white;
+}
+
+.item-grid header {
+  padding: 0.5rem;
+  border-bottom: 1px solid #303030;
+}
+.item-grid header h1 {
+  font-size: 0.7rem;
+}
+
+.item-grid tbody tr:nth-child(odd) {
+  background-color: #25252542;
+}
+.item-grid tbody tr:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.148);
+}
+
+.color--purple {
+  background-color: rgba(128, 0, 128, 0.5);
+  color: violet;
+}
+
+.total--container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.total--item {
+  background-color: #151515af;
+  /* width: 8rem; */
+  height: 6rem;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.total--item:nth-child(2) {
+  margin: 0 1rem;
+}
+
+.total--item h1 {
+  font-size: 1.3rem;
+}
+.total--item h2 {
+  margin-bottom: 0.5rem;
+  font-size: 0.8rem;
+}
+
+.actions-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.actions-container .btn {
+  /* background-color: red; */
+  max-width: 10rem;
+  max-height: 4rem;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.7rem;
+  background-color: #151515af;
+  /* border: 2px solid gray; */
+}
+
+.actions-container .btn:hover {
+  background-color: #151515c2;
+}
+
+.actions-container .btn:active {
+  background-color: #151515;
+}
+
+.actions-container .btn ion-icon {
+  /* font-size: 1.3rem; */
+  margin-right: 0.3rem;
+}
+
+/* .color--purple {
+  background-color: rgb(143, 40, 143, 0.25);
+  color: palevioletred;
+  padding: 0.5rem;
+  border-radius: 100px;
+} */
+
+.color--blue {
+  background-color: rgba(44, 44, 234, 0.25);
+  color: rgb(241, 199, 206);
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+
+.color--aquamarine {
+  background-color: rgba(94, 255, 233, 0.25);
+  color: aquamarine;
+  padding: 0.5rem;
+  border-radius: 100px;
+}
+
+.item-grid:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.bar-chart {
+  height: 12rem;
+  /* background-color: red; */
+  min-width: 20rem;
+  width: 30rem;
+  max-width: 50rem;
+  /* align-self: center; */
+}
+
+.chart-container {
+  display: flex;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../components/expenses.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="profile">
+                <img src="../images/9e43206d-2845-40e3-ae3b-ed15d35e3a96.jfif" alt="profile">
+                <h1>Allan Soriano</h1>
+            </div>
+            <ul>
+                <li>
+                    <span><ion-icon name="home"></ion-icon></span>
+                    <h1>Dashboard</h1>
+                </li>
+                <li>
+                    <span><ion-icon name="card"></ion-icon></span>
+                    <h1>Expenses</h1>
+                </li>
+                <li>
+                    <span><ion-icon name="checkmark-done-circle"></ion-icon></span>
+                    <h1>Approval</h1>
+                </li>
+                <li>
+                    <span><ion-icon name="options"></ion-icon></span>
+                    <h1>Settings</h1>
+                </li>
+                <li>
+                    <span style="color: #ff5555;"><ion-icon name="log-out"></ion-icon></span>
+                    <h1 style="color: #ff5555;">Logout</h1>
+                </li>
+            </ul>
+            <div class="logo">
+                <h1>ExpenseWise</h1>
+            </div>
+        </nav>
+        <main>
+            <header>
+                <h1>New Expense</h1>
+            </header>
+            <form action="#" class="form-container">
+                <div class="form-item">
+                    <label for="subjectForm">Subject*</label>
+                    <input type="text" id="subjectForm">
+                </div>
+                <div class="form-item">
+                    <label for="merchantForm">Merchant*</label>
+                    <input type="text" id="merchantForm">
+                </div>
+                <div class="form-item">
+                    <label for="dateForm">Date*</label>
+                    <input style="color: white;" type="date" id="dateForm">
+                </div>
+                <div class="form-item">
+                    <label for="totalForm">Total*</label>
+                    <input type="text" id="totalForm">
+                </div>
+                <div class="form-item">
+                    <label for="employeeForm">Employee*</label>
+                    <input type="text" id="employeeForm">
+                </div>
+                <div>
+                    <button class="btn">Save draft</button>
+                    <button class="btn btn-second">Save</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>

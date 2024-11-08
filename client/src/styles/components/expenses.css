@@ -1,0 +1,75 @@
+/* ====== Table Layout ====== */
+
+.expense-table {
+  width: 100%;
+  border-spacing: 0;
+  font-size: 0.8rem;
+}
+
+.expense-table thead tr th:not(th.except) {
+  text-align: left;
+  color: gray;
+  text-transform: uppercase;
+  font-weight: bold;
+  /* background-color: red; */
+}
+
+.expense-table td:not(td:first-child),
+.expense-table th:not(th:first-child) {
+  padding: 1rem;
+}
+
+.expense-table tbody tr td:first-child {
+  text-align: center;
+}
+
+/* ====== Table Contents ====== */
+
+.expense-table tbody tr td div ion-icon {
+  padding: 0.5rem;
+  background-color: rgba(0, 255, 255, 0.475);
+  color: aquamarine;
+  border-radius: 100px;
+  text-align: center;
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+.expense-table tbody tr td div {
+  display: flex;
+  align-items: center;
+}
+
+.expense-table tbody tr td,
+.expense-table tbody tr td div span h1 {
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.expense-table tbody tr td div span p {
+  color: gray;
+}
+
+.expense-table td:last-child span {
+  padding: 0.5rem 1rem;
+  background-color: rgb(148, 35, 92);
+  border-radius: 20px;
+}
+
+.expense-table tbody tr:nth-child(odd) {
+  background-color: #25252542;
+}
+.expense-table tbody tr:nth-child(even) {
+  background-color: rgba(128, 128, 128, 0.148);
+}
+
+.expense-table input[type="checkbox"] {
+  filter: sepia(100%) brightness(80%) hue-rotate(170deg) saturate(70%)
+    contrast(300%);
+  background-color: black;
+  margin-left: 1rem;
+}
+
+.expense-table tbody tr:hover {
+  transform: scale(1.01);
+}

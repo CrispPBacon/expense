@@ -4,17 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="stylesheet" href="../components/expenses.css">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
     <div class="container">
-        <div class="navbar">
+        <nav class="navbar">
+            <div class="profile">
+                <img src="../images/9e43206d-2845-40e3-ae3b-ed15d35e3a96.jfif" alt="profile">
+                <h1>Allan Soriano</h1>
+            </div>
             <ul>
                 <li>
                     <span><ion-icon name="home"></ion-icon></span>
-                    <h1>Home</h1>
+                    <h1>Dashboard</h1>
                 </li>
                 <li>
                     <span><ion-icon name="card"></ion-icon></span>
@@ -28,24 +33,31 @@
                     <span><ion-icon name="options"></ion-icon></span>
                     <h1>Settings</h1>
                 </li>
+                <li>
+                    <span style="color: #ff5555;"><ion-icon name="log-out"></ion-icon></span>
+                    <h1 style="color: #ff5555;">Logout</h1>
+                </li>
             </ul>
-        </div>
-        <div class="content">
-            <div class="header">
-                <h1>Expenses</h1>
-                <div class="header-buttons">
-                    <button>+ New expense</button>
-                </div>
+            <div class="logo">
+                <h1>ExpenseWise</h1>
             </div>
-            <table>
+        </nav>
+        <main>
+            <header>
+                <h1>Expenses</h1>
+                <div class="header-actions">
+                    <button class="btn">+ New expense</button>
+                </div>
+            </header>
+            <table class="expense-table">
                 <thead>
                     <tr>
-                        <th><input type="checkbox"></th>
+                        <th class="except"><input type="checkbox"></th>
                         <th>Details</th>
                         <th>Merchant</th>
                         <th>Amount</th>
                         <th>Report</th>
-                        <th id="animatedElement">Status</th>
+                        <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -177,9 +189,73 @@
                         <td>November 2022</td>
                         <td><span>Submitted</span></td>
                     </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <div>
+                                <ion-icon name="bag-handle"></ion-icon>
+                                <span>
+                                    <p>09/11/2022</p>
+                                    <h1>Shopping</h1>
+                                </span>
+                            </div>
+                        </td>
+                        <td>McFood</td>
+                        <td>₱250.00</td>
+                        <td>November 2022</td>
+                        <td><span>Submitted</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <div>
+                                <ion-icon name="bag-handle"></ion-icon>
+                                <span>
+                                    <p>09/11/2022</p>
+                                    <h1>Shopping</h1>
+                                </span>
+                            </div>
+                        </td>
+                        <td>McFood</td>
+                        <td>₱250.00</td>
+                        <td>November 2022</td>
+                        <td><span>Submitted</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <div>
+                                <ion-icon name="bag-handle"></ion-icon>
+                                <span>
+                                    <p>09/11/2022</p>
+                                    <h1>Shopping</h1>
+                                </span>
+                            </div>
+                        </td>
+                        <td>McFood</td>
+                        <td>₱250.00</td>
+                        <td>November 2022</td>
+                        <td><span>Submitted</span></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>
+                            <div>
+                                <ion-icon name="bag-handle"></ion-icon>
+                                <span>
+                                    <p>09/11/2022</p>
+                                    <h1>Shopping</h1>
+                                </span>
+                            </div>
+                        </td>
+                        <td>McFood</td>
+                        <td>₱250.00</td>
+                        <td>November 2022</td>
+                        <td><span>Submitted</span></td>
+                    </tr>
                 </tbody>
             </table>
-        </div>
+        </main>
     </div>
 </body>
 </html>

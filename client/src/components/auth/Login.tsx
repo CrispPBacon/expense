@@ -1,21 +1,23 @@
-import axios from "axios";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
+import api from "../../api/api";
 
 const cookies = new Cookies();
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
   const [message, setMessage] = useState({ error: false, msg: "" });
+
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    axios
+    api
       .post(
-        "http://localhost:3000/api/auth/login",
+        "/api/auth/login",
         { data: { username, password } },
         {
           headers: {
@@ -27,7 +29,7 @@ function Login() {
         console.log(response.data);
         cookies.set("TOKEN", response.data, { path: "/" });
         setMessage({ error: false, msg: "You have logged in successfully" });
-        navigate("/");
+        navigate(location.state?.from?.pathname || "/", { replace: true });
       })
       .catch((error) =>
         setMessage(
@@ -38,6 +40,7 @@ function Login() {
       );
   };
 
+  // Custom Error Message Styles
   const error = message?.error ? (
     <p
       style={{ color: "#ff5555", backgroundColor: "#101010", padding: ".5rem" }}
@@ -88,7 +91,7 @@ function Login() {
             autoSave="off"
           />
         </div>
-        <button>Login</button>
+        <button className="btn">Login</button>
       </form>
     </div>
   );

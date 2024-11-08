@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@300&display=swap");
-/* https://www.blockmate.io/blog/how-to-build-the-personal-finance-management-app-in-5-minutes-using-react-and-blockmate-web3-api */
 
-@import url("./elements/elements.css");
-@import url("./pages/login.css");
+/* https://www.blockmate.io/blog/how-to-build-the-personal-finance-management-app-in-5-minutes-using-react-and-blockmate-web3-api */
+/* https://app.uizard.io/templates/PjXBoyAKjWFnZZK7AnA5/fullscreen */
+
+@import url("./components/login.css");
+@import url("./components/expenses.css");
+@import url("./components/navbar.css");
+@import url("./components/dashboard.css");
+@import url("./components/expenseForm.css");
+
+@import url("./default.css");
+@import url("./layout.css");
+
+/* Elements Style */
+@import url("./elements/button.css");
 
 :root {
   --btn-color: rgb(0, 102, 255);
@@ -23,14 +34,14 @@
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 0.5px;
   font-weight: 300;
   display: flex;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: url("./background.jpg") no-repeat;
+  background: url("./images/background.jpg") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -44,29 +55,19 @@ body::before {
   background-color: rgba(0, 0, 0, 0.75);
   position: fixed;
   top: 0;
+  left: 0;
   z-index: -1;
 }
 
-/* *** Scroll-bar *** */
-/* width */
-::-webkit-scrollbar {
-  width: 4px;
+::selection {
+  background-color: #252525;
+  color: white;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-  border: 2px solid #202020;
-  border-radius: 20px;
+/* .item-grid td {
+  background-color: red;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #454545;
-  border-radius: 20px;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #757575;
-}
+.item-grid table {
+  border-spacing: 5px;
+} */
